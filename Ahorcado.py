@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 # import messagebox
-# import random
+import random
 
 # Se crea la ventana
 ventana = Tk()
@@ -29,18 +29,6 @@ fondo_ladrillo1 = Label(ventana, image=fondo_ladrillo)
 fondo_ladrillo1.config(bg="Black")
 fondo_ladrillo1.place(x=0, y=560)
 
-fondo_ladrillito = PhotoImage(file="fondo_ladrillo.png")
-fondo_ladrillito = fondo_ladrillito.subsample(-1, 2)
-fondo_ladrillito2 = Label(ventana, image=fondo_ladrillito)
-fondo_ladrillito2.config(bg="Black")
-fondo_ladrillito2.place(x=350, y=560)
-
-fondo_ladrillito1 = PhotoImage(file="fondo_ladrillo.png")
-fondo_ladrillito1 = fondo_ladrillito1.subsample(10, 2)
-fondo_ladrillito3 = Label(ventana, image=fondo_ladrillito1)
-fondo_ladrillito3.config(bg="Black")
-fondo_ladrillito3.place(x=710, y=560)
-
 fondo_cielo = PhotoImage(file="fondo_cielo.png")
 fondo_cielo = fondo_cielo.subsample(1, 1)
 fondo_cielo1 = Label(ventana, image=fondo_cielo)
@@ -54,6 +42,8 @@ linea_frame.place(x=750, y=0)
 linea_frame1 = Frame(ventana, width=750, height=10)
 linea_frame1.config(bg="Black")
 linea_frame1.place(x=0, y=550)
+
+# Nombre del juego y de los integrantes
 
 nombre_juego = Label(ventana, text="Ahorcado", font=("ITALIC", 25))
 nombre_juego.config(bg="White", fg="Black")
@@ -82,6 +72,8 @@ integrantes2.place(x=800, y=550)
 integrantes3 = Label(ventana, text="Jhoan Fabrizio H", font=("ITALIC", 17))
 integrantes3.config(bg="White", fg="Black")
 integrantes3.place(x=790, y=600)
+
+#Personaje ahorcado
 
 ahorcado = PhotoImage(file="Ahorcado.png")
 ahorcado = ahorcado.subsample(3, 3)
