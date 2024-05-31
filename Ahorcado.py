@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
-import messagebox
-import random
+# import messagebox
+# import random
 
 # Se crea la ventana
 ventana = Tk()
@@ -14,6 +14,8 @@ ventana.title("Ahorcado with Functions")
 ventana.geometry("1000x700")
 ventana.resizable(0,0)
 ventana.config(bg="White")
+
+# Imagenes
 
 fondo_univalle = PhotoImage(file="logo_uv.png")
 fondo_univalle = fondo_univalle.subsample(5, 5)
@@ -80,6 +82,12 @@ integrantes2.place(x=800, y=550)
 integrantes3 = Label(ventana, text="Jhoan Fabrizio H", font=("ITALIC", 17))
 integrantes3.config(bg="White", fg="Black")
 integrantes3.place(x=790, y=600)
+
+ahorcado = PhotoImage(file="Ahorcado.png")
+ahorcado = ahorcado.subsample(3, 3)
+ahorcado1 = Label(ventana, image=ahorcado)
+ahorcado1.config(bg="white", border=5, relief="groove")
+ahorcado1.place(x=50, y=25)
 
 # Boton para cerrar
 def cerrar():
