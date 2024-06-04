@@ -99,5 +99,62 @@ boton_validar = Button(ventana, text="Validar", font=("ITALIC", 20))
 boton_validar.config(width=5, bg="Red", fg="White", border=5, relief="groove")
 boton_validar.place(x=500, y=470)
 
+# funcion pregunta
+def cargar_preguntas_respuestas(nombre_archivo):
+    """
+    Carga las preguntas y respuestas desde un archivo de texto.
+    El archivo debe tener el formato:
+    "Pregunta 1, Respuesta 1, Respuesta 2, Respuesta 3"
+    "Pregunta 2, Respuesta 1, Respuesta 2, Respuesta 3"
+    ...
+    """
+    preguntas_respuestas = []
+    try:
+        with open(nombre_archivo, "r", encoding="utf-8") as archivo:
+            for linea in archivo:
+                pregunta, *respuestas = map(str.strip, linea.strip().split(","))
+                respuestas = [respuesta.replace("[", "").replace("]", "").replace("'", "").replace('"', '') for respuesta in respuestas]
+                preguntas_respuestas.append((pregunta, respuestas))
+    except FileNotFoundError:
+        print(f"El archivo '{nombre_archivo}' no existe.")
+    return preguntas_respuestas
+
+def hacer_pregunta(pregunta, respuestas):
+    """
+    Presenta una pregunta y muestra las respuestas mezcladas.
+    """
+    print(f"Pregunta: {pregunta}\n")
+    respuestas_mezcladas = random.sample(respuestas, len(respuestas))
+  
+    for i, respuesta in enumerate(respuestas_mezcladas, start=1):
+        print(f"{i}. {respuesta}")
+    
+    while True:
+        try:
+            respuesta_usuario = int(input("Elige la respuesta correcta entre (1, 2 o 3): ")) - 1
+            if 0 <= respuesta_usuario < len(respuestas_mezcladas):
+                break
+            else:
+                print("Ingresa un número válido (1, 2 o 3).")
+        except ValueError:
+            print("Ingresa un número válido que sea (1, 2 o 3).")
+    
+    return respuestas[respuesta_usuario]
+
+def main():
+    archivo_preguntas = "preguntas.txt"
+    preguntas_respuestas = cargar_preguntas_respuestas(archivo_preguntas)
+    if preguntas_respuestas:
+        for pregunta, respuestas in preguntas_respuestas:
+            respuesta_usuario = hacer_pregunta(pregunta, respuestas)
+            if respuesta_usuario == respuestas[0]:
+                print("¡Correcto!\n")
+            else:
+                print(f"Respuesta incorrecta. La respuesta correcta era: {respuestas[0]}\n")
+
+if __name__ == "__main__":
+    main()
+
+
 # Se mantiene la ventana abierta
 ventana.mainloop()
