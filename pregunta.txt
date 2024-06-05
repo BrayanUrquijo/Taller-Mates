@@ -1,4 +1,4 @@
-"[Cuál es el dominio  de la siguiente funcion : F(x) = x^2 - 6x + 5; ], [Desde 0 incluido hasta 6 tambien incluido] , [Desde 6 hasta el ∞  ] , [Desde -∞  hasta el 0]"
+"[Cuál es el dominio  de la siguiente funcion : F(x) = x^2 - 6x + 5 ], [Desde 0 incluido hasta 6 tambien incluido] , [Desde 6 hasta el ∞  ] , [Desde -∞  hasta el 0]"
 "[Calcular la pendiente de la recta  2y = 4x + 12], [m : 2], [m : 1/2], [m : 6]"
 "[La parabola de la siguiente fun.cuadratica x^2 + 2 pa donde se abre], [Se abre para arriba desde 2], [Se abre para arriba desde -2], [Se abre para abajo desde -2] "
 "[Usa la forma factorizada para solucionar la siguiente funcion f(x) = x^2 + x − 6 ],[x = -3 ; x = 2], [x = 1; x = 2], [x = -1; x = 3]"
