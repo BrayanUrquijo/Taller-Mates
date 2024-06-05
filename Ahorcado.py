@@ -100,6 +100,7 @@ boton_validar.config(width=5, bg="Red", fg="White", border=5, relief="groove")
 boton_validar.place(x=500, y=470)
 
 # funcion pregunta
+l = "abcdfghijklmnñopqrstuvwxyz"
 def cargar_preguntas_respuestas(nombre_archivo):
     """
     Carga las preguntas y respuestas desde un archivo de texto.
@@ -153,7 +154,9 @@ def main():
                 print(f"Respuesta incorrecta. La respuesta correcta era: {respuestas[0]}\n")
 
 if __name__ == "__main__":
-    main()
+    def palabra_pregu():
+        if letra.get() == :
+            main()
 
 
 # Se mantiene la ventana abierta
