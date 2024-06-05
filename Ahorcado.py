@@ -100,14 +100,10 @@ boton_validar.config(width=5, bg="Red", fg="White", border=5, relief="groove")
 boton_validar.place(x=500, y=470)
 
 # funcion pregunta
-l = "abcdfghijklmnñopqrstuvwxyz"
+
 def cargar_preguntas_respuestas(nombre_archivo):
     """
     Carga las preguntas y respuestas desde un archivo de texto.
-    El archivo debe tener el formato:
-    "Pregunta 1, Respuesta 1, Respuesta 2, Respuesta 3"
-    "Pregunta 2, Respuesta 1, Respuesta 2, Respuesta 3"
-    ...
     """
     preguntas_respuestas = []
     try:
@@ -143,8 +139,8 @@ def hacer_pregunta(pregunta, respuestas):
     return respuestas[respuesta_usuario]
 
 def main():
-    archivo_preguntas = "preguntas.txt"
-    preguntas_respuestas = cargar_preguntas_respuestas(archivo_preguntas)
+    archivo_preg = "preguntas.txt"
+    preguntas_respuestas = cargar_preguntas_respuestas(archivo_preg)
     if preguntas_respuestas:
         for pregunta, respuestas in preguntas_respuestas:
             respuesta_usuario = hacer_pregunta(pregunta, respuestas)
@@ -155,7 +151,7 @@ def main():
 
 if __name__ == "__main__":
     def palabra_pregu():
-        if letra.get() == :
+        if letra.get() == True :
             main()
 
 
